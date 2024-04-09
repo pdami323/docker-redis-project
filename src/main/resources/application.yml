@@ -1,0 +1,33 @@
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 8082
+    password: '1234'
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 2
+
+
+springdoc:
+  packages-to-scan: com.study.dockerredisproject
+  default-produces-media-type: application/json;charset=UTF-8
+  default-consumes-media-type: application/json;charset=UTF-8
+  title: redis api swagger
+  version: v1.0.0
+  description: redis project description
+  cache:
+    disabled: true
+  swagger-ui:
+    operations-sorter: alpha
+    tags-sorter: alpha
+    path: /api-docs
+    csrf:
+      enabled: true
+  api-docs:
+    path: /api-docs/json
+    groups:
+      enabled: true
+server:
+  port: 8080
