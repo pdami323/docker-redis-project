@@ -13,7 +13,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @Configuration
 @EnableRedisRepositories
-@RequiredArgsConstructor
 public class RedisConfig {
 
     @Value("${spring.redis.host}")
@@ -25,7 +24,6 @@ public class RedisConfig {
     @Value("${spring.redis.password}")
     private String password;
 
-    //
     @Bean
     public RedisConnectionFactory redisConnectionFactory(){
         RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration();

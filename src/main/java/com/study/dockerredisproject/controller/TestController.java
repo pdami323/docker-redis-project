@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 @RequestMapping("/api/test")
-@Tag(name = "레디스 컨트롤러", description = "redis 컨트롤러")
+@Tag(name = "02. 테스트 컨트롤러", description = "redis 컨트롤러")
 public class TestController {
 
     @Autowired
@@ -33,7 +33,5 @@ public class TestController {
         }
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
-
-
 
 }
